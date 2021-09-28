@@ -1,4 +1,4 @@
-# Mercedes-Used-Cars-Price-Prediction-Deployment
+# Mercedes-Used-Cars-Price-Prediction
 
 [![Kaggle](https://img.shields.io/badge/Dataset-Kaggle-blue.svg)](https://www.kaggle.com/nitinchoudhary012/mercedes-car-price-prediction/data?select=merc.csv) ![Python 3.6](https://img.shields.io/badge/Python-3.6-brightgreen.svg)
 
