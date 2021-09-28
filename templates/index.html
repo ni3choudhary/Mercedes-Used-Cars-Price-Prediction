@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <title>🚗 🏎 Mercedes Car Price Prediction 🚙 🚘 </title>
+    </head>
+    
+<style>
+
+
+input[type=text], select {
+  width: 80%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border-radius: 4px;
+  font-weight: bolder;
+}
+
+
+input[type=submit] {
+  width: 80%;
+  background-color: red;
+  opacity: 0.7;
+  color:black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size:100;
+  font-weight: bolder;
+}
+
+
+input[type=submit]:hover {
+  background-color: red;
+  opacity: 0.9;
+}
+form{
+    border-radius: 10px;
+    padding-top: 5%;
+    font-weight: bolder;
+    color:yellow;
+    font-size: 10px;
+    text-decoration: underline;
+    border-bottom: 2px solid #fff;
+}
+div {
+ 
+  border-radius: 5px;
+  margin-left: 1.5%;
+  width: 25%;
+  
+}
+h1{
+    color:color-blue;
+    font-size: 40px;
+    font-weight: bolder;
+}
+h3{
+  color: white;
+  font-size: 40px;
+  border-radius: 10px;
+  font-weight: bolder;
+  padding: 14px 20px;
+}
+
+body {
+            
+            background-image: url("static/images/car.jpg");
+            background-repeat: no-repeat;
+            background-size: cover;
+            text-align: center;
+            padding: 0px;
+            color:#F0FFF0;
+            background-attachment: fixed;
+        }
+       
+</style>
+
+<body>
+
+<h1>🚗 🏎 Mercedes Car Price Prediction 🚙 🚘 </h1>
+
+<div>
+ 
+ <form action="{{ url_for('predict')}}" method="post" style="background-color:#4A6768">
+
+<label for="model_C_Class">Model</label><br>
+<select id="model_C_Class" name="model_ C Class">
+      <option value="C Class">C Class</option>
+      <option value="A Class">A Class</option>
+      <option value="B Class">B Class</option>
+      <option value="CL Class">CL Class</option>
+      <option value="CLA Class">CLA Class</option>
+      <option value="CLC Class">CLC Class</option>
+      <option value="CLK Class">CLK Class</option>
+      <option value="CLS Class">CLS Class</option>
+      <option value="E Class">E Class</option>
+      <option value="G Class">G Class</option>
+      <option value="GL Class">GL Class</option>
+      <option value="GLA Class">GLA Class</option>
+      <option value="GLB Class">GLB Class</option>
+      <option value="GLC Class">GLC Class</option>
+      <option value="GLE Class">GLE Class</option>
+      <option value="GLS Class">GLS Class</option>
+      <option value="M Class">M Class</option>
+      <option value="R Class">R Class</option>
+      <option value="S Class">S Class</option>
+      <option value="SL Class">SL Class</option>
+      <option value="SLK Class">SLK Class</option>
+      <option value="V Class">V Class</option>
+      <option value="X Class">X Class</option>
+      <option value="Model 180">Model 180</option>
+      <option value="Model 200">Model 200</option>
+      <option value="Model 220">Model 220</option>
+      <option value="Model 230">Model 230</option>
+    </select><br>  
+
+<label for="age">Age 💰</label><br>
+<input type="text" id="age" name="Age" placeholder="For example: 20/21 years...." required="required"><br>
+<label for="mileage">Distance Travelled(in Miles)</label><br>
+<input type="text" id="mileage" name="mileage" placeholder="For example: 6200 Miles..." required="required"><br>
+<label for="tax">Road Tax(£)</label><br>
+<input type="text" id="tax" name="tax" placeholder="For example: 20 £" required="required"><br>
+<label for="mpg">MPG(Miles Per Gallon)</label><br>
+<input type="text" id="mpg" name="mpg" placeholder="For example: 174.." required="required"><br>
+<label for="engineSize">Engine Size(in Litres)</label><br>
+<input type="text" id="engineSize" name="engineSize" placeholder="For example: 4 litres.." required="required"><br>
+     
+<label for="fuelType_Petrol">Fuel ⛽</label><br>
+    <select id="fuelType_Petrol" name="fuelType_Petrol" required="required">
+      <option value="Petrol">Petrol ⛽</option>
+      <option value="Diesel">Diesel ⛽</option>
+      <option value="Other">Other ⛽</option>
+    </select><br>
+
+<label for="transmission_Manual ">Transmission Type ⚙️</label><br>
+    <select id="transmission_Manual" name="transmission_Manual" required="required">
+      <option value="manual car">Manual 🚗</option>
+      <option value="automatic car ">Automatic 🚙</option>
+      <option value="semi-auto car">Semi_Auto 🚗</option>
+     </select> <br>
+     
+         
+<input type="submit" value="Calculate Selling Price">
+</form>
+</div>
+    
+
+<h3>{{ prediction_text }}</h3>
+
+</body>
+</html>
